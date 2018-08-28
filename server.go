@@ -44,7 +44,9 @@ func (s *SRPServer) SetA(A []byte) {
 	S := serverGetS(s.Params, s.Verifier, AInt, s.Secret2, U)
 
 	s.K = getK(s.Params, S)
-	s.M1 = getM1(s.Params, A, intToBytes(s.B), S)
+	//changed S in getM1(s.Params, A, intToBytes(s.B), S) to s.K to make 
+	//it compatible with sjcl (https://github.com/bitwiseshiftleft/sjcl)
+	s.M1 = getM1(s.Params, A, intToBytes(s.B), s.K)
 	s.M2 = getM2(s.Params, A, s.M1, s.K)
 
 	s.u = U               // only for tests
