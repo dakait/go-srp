@@ -2,8 +2,7 @@
 [![](https://api.travis-ci.org/getinsomnia/go-srp.svg)](https://travis-ci.org/getinsomnia/go-srp)
 [![](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/getinsomnia/go-srp)
 
-_NOTE: This is a port of [node-srp](https://github.com/mozilla/node-srp) to Go. I recommend
-reading their README for general information about the use of SRP._
+_Credit: This is a fork of [getinsomnia's](https://github.com/getinsomnia/go-srp) implementation that is compatible with [sjcl](https://github.com/bitwiseshiftleft/sjcl)._
 
 ## Installation
 
