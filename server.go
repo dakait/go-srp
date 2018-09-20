@@ -45,7 +45,7 @@ func (s *SRPServer) SetA(A []byte) {
 
 	s.K = getK(s.Params, S)
 	//changed S in getM1(s.Params, A, intToBytes(s.B), S) to s.K to make 
-	//it compatible with sjcl (https://github.com/bitwiseshiftleft/sjcl)
+	//it compatible with jsrp (https://github.com/alax/jsrp)
 	s.M1 = getM1(s.Params, A, intToBytes(s.B), s.K)
 	s.M2 = getM2(s.Params, A, s.M1, s.K)
 
